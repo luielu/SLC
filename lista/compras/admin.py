@@ -1,3 +1,5 @@
 from django.contrib import admin
+from .models import compras, lista
 
-# Register your models here.
+admin.site.register(compras)
+admin.site.register(lista)

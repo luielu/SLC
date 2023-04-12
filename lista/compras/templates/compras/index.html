@@ -1,0 +1,10 @@
+{% extends "compras/layout.html" %}
+
+{% block body %}
+    <h1>compras:</h1>
+    <ul>
+        {% for compras in compras %}
+            <li>compras {{ compras.id }}: {{ compras.compra }} R$ {{ compras.preco}}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

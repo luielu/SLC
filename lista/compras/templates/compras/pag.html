@@ -1,0 +1,22 @@
+{% extends "compras/layout.html" %}
+
+{% block body %}
+    <h1>compras {{ compras.id }}</h1>
+    <ul>
+        <li>compra: {{ compras.compra }}</li>
+        <li>preco: {{ compras.preco }} </li>
+    </ul>
+    <a href="{% url 'index' %}">All compras</a>
+{% endblock %}
+
+
+{% extends "compras/layout.html" %}
+
+{% block body %}
+    <h1>compras:</h1>
+    <ul>
+        {% for compras in compras %}
+            <li><a href="{% url 'compras' compras.id %}">compras {{ compras.id }}</a>: {{ compras.compra }} to {{ compras.preco }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
