@@ -4,7 +4,8 @@
     <h1>compras:</h1>
     <ul>
         {% for compras in compras %}
-            <li>compras {{ compras.id }}: {{ compras.compra }} R$ {{ compras.preco}}</li>
+            <!-- <li>compras {{ compras.id }}: {{ compras.compra }} R$ {{ compras.preco}}</li> -->
+            <li><a href="{% url 'compras' compras.id %}">Compras {{ compras.id }}</a>: {{ compras.compra }} to {{ compras.preco }}</li>
         {% endfor %}
     </ul>
 {% endblock %}

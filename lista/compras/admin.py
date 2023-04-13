@@ -1,5 +1,6 @@
 from django.contrib import admin
-from .models import compras, lista
+from .models import Compras, Lista, Marcas
 
-admin.site.register(compras)
-admin.site.register(lista)
+admin.site.register(Compras)
+admin.site.register(Lista)
+admin.site.register(Marcas)

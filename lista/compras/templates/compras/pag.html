@@ -1,22 +1,21 @@
 {% extends "compras/layout.html" %}
 
 {% block body %}
-    <h1>compras {{ compras.id }}</h1>
+    <h1>Compras {{ compras.id }}</h1>
     <ul>
         <li>compra: {{ compras.compra }}</li>
         <li>preco: {{ compras.preco }} </li>
     </ul>
-    <a href="{% url 'index' %}">All compras</a>
-{% endblock %}
+    <a href="{% url 'index' %}">All Compras</a>
 
 
-{% extends "compras/layout.html" %}
+    <h2>Marcas:</h2>
+<ul>
+    {% for marca in marcas %}
+        <li>{{ marca }}</li>
+    {% empty %}
+        <li>No Marcas.</li>
+    {% endfor %}
+</ul>
 
-{% block body %}
-    <h1>compras:</h1>
-    <ul>
-        {% for compras in compras %}
-            <li><a href="{% url 'compras' compras.id %}">compras {{ compras.id }}</a>: {{ compras.compra }} to {{ compras.preco }}</li>
-        {% endfor %}
-    </ul>
-{% endblock %}
+{% endblock %} 
