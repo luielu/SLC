@@ -24,4 +24,4 @@ class Marcas(models.Model):
     compras = models.ManyToManyField(Compras, blank=True, related_name="marcas")
 
     def __str__(self):
-        return f"ID:{self.id} {self.marca} {self.compras}"
+        return f"{self.marca}"

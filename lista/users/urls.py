@@ -1,10 +1,8 @@
 from django.urls import path
 from . import views
 
-app_name = "compras"
 urlpatterns = [
     path('', views.index, name="index"),
-    path("<int:compras_id>", views.compras, name="compras"),
-   
-
+    path("login", views.login_view, name="login"),
+    path("logout", views.logout_view, name="logout")
 ]

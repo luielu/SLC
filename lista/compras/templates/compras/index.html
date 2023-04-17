@@ -1,11 +1,12 @@
 {% extends "compras/layout.html" %}
 
 {% block body %}
-    <h1>compras:</h1>
+    <h1>Compras:</h1>
+    <t></t>
     <ul>
         {% for compras in compras %}
             <!-- <li>compras {{ compras.id }}: {{ compras.compra }} R$ {{ compras.preco}}</li> -->
-            <li><a href="{% url 'compras' compras.id %}">Compras {{ compras.id }}</a>: {{ compras.compra }} to {{ compras.preco }}</li>
+            <li><a href="{% url 'compras:compras' compras.id %}">{{ compras.compra }} </a></li>
         {% endfor %}
     </ul>
 {% endblock %}
